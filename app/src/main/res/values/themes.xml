@@ -2,4 +2,8 @@
 <resources>
 
     <style name="Theme.Emergencia" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.GeeksforGeeks" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+    </style>
 </resources>

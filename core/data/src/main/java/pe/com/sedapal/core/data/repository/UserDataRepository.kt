@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pe.com.sedapal.core.data
+package pe.com.sedapal.core.data.repository
 
 import kotlinx.coroutines.flow.Flow
 import pe.com.sedapal.core.model.UserData
@@ -25,5 +25,4 @@ interface UserDataRepository {
      * Stream of [UserData]
      */
     val userData: Flow<UserData>
-
 }
