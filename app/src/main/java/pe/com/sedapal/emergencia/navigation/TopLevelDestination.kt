@@ -1,7 +1,8 @@
 package pe.com.sedapal.emergencia.navigation
 
 import androidx.compose.ui.graphics.vector.ImageVector
-//import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
+import pe.com.sedapal.emergencia.R
+import pe.com.sedapal.emergencia.ui.icon.NiaIcons
 //import com.google.samples.apps.nowinandroid.feature.bookmarks.R as bookmarksR
 //import com.google.samples.apps.nowinandroid.feature.foryou.R as forYouR
 //import com.google.samples.apps.nowinandroid.feature.interests.R as interestsR

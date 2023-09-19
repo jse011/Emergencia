@@ -63,8 +63,15 @@ import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
 import pe.com.sedapal.core.data.util.NetworkMonitor
 import pe.com.sedapal.core.data.repository.UserNewsResourceRepository
+import pe.com.sedapal.emergencia.R
 import pe.com.sedapal.emergencia.navigation.NiaNavHost
 import pe.com.sedapal.emergencia.navigation.TopLevelDestination
+import pe.com.sedapal.emergencia.ui.component.NiaBackground
+import pe.com.sedapal.emergencia.ui.component.NiaGradientBackground
+import pe.com.sedapal.emergencia.ui.component.NiaTopAppBar
+import pe.com.sedapal.emergencia.ui.icon.NiaIcons
+import pe.com.sedapal.emergencia.ui.theme.GradientColors
+import pe.com.sedapal.emergencia.ui.theme.LocalGradientColors
 
 @OptIn(
     ExperimentalMaterial3Api::class,
@@ -111,11 +118,12 @@ fun NiaApp(
                 }
             }
 
-            if (showSettingsDialog) {
+            //Show dialog
+            /*if (showSettingsDialog) {
                 SettingsDialog(
                     onDismiss = { showSettingsDialog = false },
                 )
-            }
+            }*/
 
             val unreadDestinations by appState.topLevelDestinationsWithUnreadResources.collectAsStateWithLifecycle()
 
