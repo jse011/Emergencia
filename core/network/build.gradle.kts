@@ -6,7 +6,10 @@ plugins {
 }
 
 android {
-    namespace = "pe.com.sedapal.core.data"
+    buildFeatures {
+        buildConfig = true
+    }
+    namespace = "pe.com.sedapal.core.network"
     compileSdk = 33
 
     defaultConfig {
@@ -36,11 +39,14 @@ android {
 
 dependencies {
 
-    implementation(project(":core:model"))
-    implementation(project(":core:network"))
-
     implementation("com.google.dagger:hilt-android:2.47")
     kapt("com.google.dagger:hilt-android-compiler:2.47")
+    implementation("androidx.datastore:datastore:1.0.0")
+
+    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation("io.coil-kt:coil-svg:2.4.0")
+
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

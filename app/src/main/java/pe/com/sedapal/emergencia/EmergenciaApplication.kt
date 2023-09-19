@@ -14,23 +14,28 @@
  * limitations under the License.
  */
 
-package pe.com.sedapal.core.data
+package pe.com.sedapal.emergencia
 
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.callbackFlow
-import pe.com.sedapal.core.data.repository.UserDataRepository
-import pe.com.sedapal.core.model.UserData
+import android.app.Application
+import coil.ImageLoader
+import coil.ImageLoaderFactory
+import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
+import javax.inject.Provider
 
-class OfflineFirstUserDataRepository @Inject constructor() : UserDataRepository {
+/**
+ * [Application] class for NiA
+ */
+@HiltAndroidApp
+class EmergenciaApplication : Application(), ImageLoaderFactory {
+    @Inject
+    lateinit var imageLoader: Provider<ImageLoader>
 
-    override val userData: Flow<UserData> = callbackFlow {
-        trySend(
-            UserData(
-                bookmarkedNewsResources = "",
-            )
-        ).isSuccess
-
+    override fun onCreate() {
+        super.onCreate()
+        // Initialize Sync; the system responsible for keeping data in the app up to date.
+        //Sync.initialize(context = this)
     }
 
+    override fun newImageLoader(): ImageLoader = imageLoader.get()
 }
