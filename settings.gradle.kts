@@ -1,5 +1,11 @@
 import java.net.URI
 
+include(":core:analytics")
+
+
+include(":core:ui")
+
+
 include(":core:network")
 
 

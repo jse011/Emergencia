@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "356806863051",
+    "project_id": "emergencia-e64c7",
+    "storage_bucket": "emergencia-e64c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356806863051:android:e24f974d121274a00d934e",
+        "android_client_info": {
+          "package_name": "pe.com.sedapal.emergencia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTZAm9Y5tyBEXf9RzikPv4e_G0HHmMXSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
